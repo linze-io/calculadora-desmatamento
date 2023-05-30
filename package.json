@@ -10,9 +10,8 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "eslint --fix",
-      "git add"
+    "src/**/*.{ts,tsx}": [
+      "eslint --fix"
     ]
   },
   "dependencies": {
