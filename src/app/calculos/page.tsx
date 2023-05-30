@@ -9,5 +9,5 @@ export default function Calculos() {
 
     console.log("TotalwoodAndNonWoodProducts", woodAndNonWoodProducts1)
   }, [])
-  return <h1>test a dadsa</h1>
+  return <h2>teste</h2>
 }
