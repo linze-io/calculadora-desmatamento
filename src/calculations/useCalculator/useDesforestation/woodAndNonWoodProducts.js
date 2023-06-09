@@ -1,10 +1,11 @@
 import calcMontante from "../../utils/calcMontante"
 import vpl from "../../utils/vpl"
-import calcularVP from "../../utils/vp"
 
 const woodAndNonWoodProducts = () => {
   //Dado de input
   const hectare = 1
+/*
+  Sessão discartada, pois iremos utilizar um valor fixo como foi feito na calculadora de mineração
 
   //Dados fixos
   //const pmnmPorHa = 1
@@ -20,12 +21,16 @@ const woodAndNonWoodProducts = () => {
   const vpMadeiraPorHa = calcularVP(
     txDisconto,
     qtdAnos,
-    -madeiraValorAnualPorHa
+    madeiraValorAnualPorHa
   )
+  console.log("madeiraValorAnualPorHa", madeiraValorAnualPorHa)
 
   //Média de dois valores, assim tendo como resultado o valor de custo total
   const custoTotalPMNMporHaReais = vpNaoMadeireiroSAFPorHa + vpMadeiraPorHa / 2
   console.log("custoTotalPMNMporHaReais", custoTotalPMNMporHaReais)
+  */
+
+  const custoTotalPMNMporHaReais = 764
 
   //função que faz o calculo montante utilizando o valor de custoTotalPMNMporHaReais
   const amounts = calcMontante(custoTotalPMNMporHaReais)
