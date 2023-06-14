@@ -33,8 +33,8 @@ export default function Home() {
                 <span className="font-bold">
                   Deforestation Impacts Calculator
                 </span>{" "}
-                is a tool to assess the social and environmental damage
-                caused by forest logging in the Amazon
+                is a tool to assess the social and environmental damage caused
+                by forest logging in the Amazon
               </h1>
               <div className="flex mx-auto gap-8">
                 <Button
@@ -98,7 +98,9 @@ export default function Home() {
           <div
             className="bg-cover bg-center w-full md:w-1/2 h-[408px] border border-black bg-black"
             //style={{ backgroundImage: `url("/images/teste2.png")` }}
-          >video</div>
+          >
+            video
+          </div>
         </div>
 
         <h1 className="flex text-2xl md:text-4xl font-bold p-10 border-t-8 border-black gap-4 items-center">
