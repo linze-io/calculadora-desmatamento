@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className="container-lg p-0 mb-0 bg-black bg-opacity-0 px-0 lg:px-0">
       <div className="flex flex-col mx-auto gap-0 text-white">
-        <div className="flex justify-between gap-8 md:gap-0 p-10 text-xs tracking-widest font-semibold uppercase text-gray-900 text-center">
+        <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-0 p-10 text-xs tracking-widest font-semibold uppercase text-gray-900 text-center">
           <div className="flex">
             <div className="hover:underline underline-offset-8 hover:text-black">
               <Link href="/">Calculadora</Link>
