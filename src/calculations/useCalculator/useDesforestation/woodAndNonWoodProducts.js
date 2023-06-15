@@ -4,11 +4,10 @@ import vpl from "../../utils/vpl"
 const woodAndNonWoodProducts = () => {
   //Dado de input
   const hectare = 1
-  const txDisconto = 0.03
-  /*
+/*
   Sessão discartada, pois iremos utilizar um valor fixo como foi feito na calculadora de mineração
 
-    //Dados fixos
+  //Dados fixos
   //const pmnmPorHa = 1
   const txDisconto = 0.03
   const m3PorHaMaderia = 30
