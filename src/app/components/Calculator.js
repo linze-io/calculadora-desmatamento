@@ -3,6 +3,12 @@
 import Head from "next/head"
 import Button from "@mui/material/Button"
 import { RiPlantFill } from "react-icons/ri/"
+import Accordion from "@mui/material/Accordion"
+import AccordionSummary from "@mui/material/AccordionSummary"
+import AccordionDetails from "@mui/material/AccordionDetails"
+import Typography from "@mui/material/Typography"
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
+import TextField from "@mui/material/TextField"
 
 //import videoCover from '.././public/images/teste2.png'
 
@@ -24,17 +30,17 @@ export default function Home() {
       <main className="-mt-40">
         <div
           className="pt-32 bg-cover bg-center px-5 lg:px-0 bg-black"
-          style={{ backgroundImage: `url("/images/test1.png")` }}
+          //style={{ backgroundImage: `url("/images/test1.png")` }}
         >
-          <div className="flex mx-auto items-center border-b-8 border-black">
-            <div className="flex w-full items-center justify-between text-white pt-48 pb-10 px-10 md:pb-28 lg:pb-40 gap-0">
-              <h1 className="text-4xl font-light text-left mb-4 pt-0 w-1/2">
+          <div className="flex mx-auto items-center border-b-0 border-black">
+            <div className="flex flex-col md:flex-row w-full items-center justify-between text-white pt-16 md:pt-48 pb-10 px-4 md:px-10 md:pb-28 lg:pb-40 gap-10 md:gap-0">
+              <h1 className=" text-2xl md:text-4xl font-light text-left mb-4 pt-0 md:w-1/2">
                 The{" "}
                 <span className="font-bold">
                   Deforestation Impacts Calculator
                 </span>{" "}
-                is <br />a tool to assess the social and environmental damage
-                caused by forest logging in the Amazon
+                is a tool to assess the social and environmental damage caused
+                by forest logging in the Amazon
               </h1>
               <div className="flex mx-auto gap-8">
                 <Button
@@ -62,101 +68,205 @@ export default function Home() {
           </div>
         </div>
 
-        <h1 className="flex text-4xl font-bold p-10 border-b-8 border-black gap-4 items-end">
+        <h1 className="flex text-2xl md:text-4xl font-bold p-10 border-b-8 border-black gap-4 items-center">
           <RiPlantFill />
-          Como funciona
+          Calculadora
         </h1>
 
-        <div className="flex flex-col md:flex-row mx-4 md:mx-auto pt-0 justify-between items-center gap-10 md:gap-0">
-          <div className="w-full md:w-1/2 p-10 border-r-8 border-black">
-            <div className="mb-4 text-xl">
-              <p>
-                Você pode incluir algumas informações sobre o contexto para que
-                a calculadora estime o valor dos impactos de forma mais precisa.
-                <br />A localização define outras variáveis como:
-              </p>
-              <div className="mt-4">
-                <ul>
-                  <li>- Densidade e tamanho da população afetada</li>
-
-                  <li>- Média de consumo de peixe</li>
-
-                  <li>- Custo de transporte para recuperação de áreas</li>
-
-                  <li>- Tipo de garimpo</li>
-                </ul>
-              </div>
-
-              <p className="mt-4">
-                Caso não tenha informações específicas, não tem problema, serão
-                incluídos automaticamente valores médios de contexto e impacto e
-                resultados e suas explicações serão gerados na sequencia.
-              </p>
+        <div className="flex flex-col md:flex-row mx-0 md:mx-auto justify-between border-b-8 border-black items-start gap-10 md:gap-0">
+          <div className="flex w-full md:w-2/3 p-0 md:border-r-8 md:h-screen border-black">
+            <div className="mb-0 text-xl">
+              <h3 className="p-4 font-bold">How to use</h3>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography>Set location</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse malesuada lacus ex, sit amet blandit leo
+                    lobortis eget.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2a-content"
+                  id="panel2a-header"
+                >
+                  <Typography>Types of minning</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse malesuada lacus ex, sit amet blandit leo
+                    lobortis eget.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2a-content"
+                  id="panel3a-header"
+                >
+                  <Typography>Retort use</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse malesuada lacus ex, sit amet blandit leo
+                    lobortis eget.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2a-content"
+                  id="panel4a-header"
+                >
+                  <Typography>Units of measurement</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse malesuada lacus ex, sit amet blandit leo
+                    lobortis eget.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2a-content"
+                  id="panel4a-header"
+                >
+                  <Typography>Value hypotesis</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse malesuada lacus ex, sit amet blandit leo
+                    lobortis eget.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2a-content"
+                  id="panel5a-header"
+                >
+                  <Typography>Inflation</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse malesuada lacus ex, sit amet blandit leo
+                    lobortis eget.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2a-content"
+                  id="panel6a-header"
+                >
+                  <Typography>Uses of the calculator</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse malesuada lacus ex, sit amet blandit leo
+                    lobortis eget.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
             </div>
           </div>
 
-          <div
-            className="bg-cover bg-center w-1/2 h-[408px] border border-black bg-black"
-            style={{ backgroundImage: `url("/images/teste2.png")` }}
-          ></div>
-        </div>
-
-        <h1 className="flex text-4xl font-bold p-10 border-t-8 border-black gap-4 items-end">
-          <RiPlantFill /> Entenda os impactos do desmatamento
-        </h1>
-
-        <div className="mt-0 pt-0 pb-0 px-4 md:px-0 border-y-8 border-black">
-          <div className="mx-auto p-0">
-            <div className="flex justify-between p-0 gap-0">
-              <div className="flex flex-col justify-between bg-white border-0 p-0 gap-4 shadow-none w-1/2 border-r-8 border-black">
-                <div>
-                  <img className="w-16 mx-auto pt-8" src="/images/ico1.svg" />
-                  <div className="w-2/3 mx-auto text-3xl font-bold mt-0 border-b-2 border-black px-4 py-4 text-center">
-                    Restauração
-                  </div>
-                </div>
-                <div className="text-center px-6 w-2/3 mx-auto text-2xl">
-                  Áreas são abertas para escavação e para a construção de
-                  infraestrutura, como estradas e pistas de pouso
-                </div>
-                <div className="p-10 text-center w-full">
-                  <Button
-                    className="shadow-sm font-bold w-1/4 py-4 px-4 text-green-800 border-green-400 hover:border-green-400 bg-green-400 hover:bg-green-500"
-                    variant="outlined"
-                    color="primary"
-                    size="medium"
-                    href="/"
-                    target="_blank"
-                  >
-                    Leia mais
-                  </Button>
-                </div>
+          <div className="flex flex-col md:w-1/3 mx-auto">
+            <h3 className="pt-4 px-8 font-bold text-xl">Calculator</h3>
+            <div className="flex flex-col p-8 gap-4 -my-6">
+              <TextField
+                id="standard-basic"
+                label="Country"
+                variant="standard"
+              />
+              <TextField
+                id="standard-basic"
+                label="General or specific impacts?"
+                variant="standard"
+              />
+              <div className="flex grid-cols-2 gap-4">
+                <TextField
+                  id="standard-basic"
+                  label="State"
+                  variant="standard"
+                />
+                <TextField
+                  id="standard-basic"
+                  label="Region"
+                  variant="standard"
+                />
               </div>
-
-              <div className="flex flex-col justify-between bg-white border-0 p-0 gap-4 shadow-none w-1/2 border-r-0 border-black">
-                <div>
-                  <img className="w-16 mx-auto pt-8" src="/images/ico2.svg" />
-                  <div className="w-2/3 mx-auto text-3xl font-bold mt-0 border-b-2 border-black px-4 py-4 text-center">
-                    Serviços Ecossistêmicos
-                  </div>
-                </div>
-                <div className="text-center px-6 w-2/3 mx-auto text-2xl">
-                  Áreas são abertas para escavação e para a construção de
-                  infraestrutura, como estradas e pistas de pouso
-                </div>
-                <div className="p-10 text-center w-full">
-                  <Button
-                    className="shadow-sm font-bold w-1/4 py-4 px-4 text-green-800 border-green-400 hover:border-green-400 bg-green-400 hover:bg-green-500"
-                    variant="outlined"
-                    color="primary"
-                    size="medium"
-                    href="/"
-                    target="_blank"
-                  >
-                    Leia mais
-                  </Button>
-                </div>
+              <div className="flex grid-cols-2 gap-4">
+                <TextField
+                  id="standard-basic"
+                  label="Extraction type"
+                  variant="standard"
+                />
+                <TextField
+                  id="standard-basic"
+                  label="Is a retort used to reduce the dispersion of mercury?"
+                  variant="standard"
+                />
               </div>
+              <TextField
+                id="standard-basic"
+                label="Unit(s) of measurement"
+                variant="standard"
+              />
+              <div className="flex grid-cols-2 gap-4">
+                <TextField
+                  id="standard-basic"
+                  label="Hectare(s)"
+                  variant="standard"
+                />
+                <TextField
+                  id="standard-basic"
+                  label="Pit depth"
+                  variant="standard"
+                />
+              </div>
+              <TextField
+                id="standard-basic"
+                label="Accumulated inflation since January 2022 (%)"
+                variant="standard"
+              />
+              <TextField
+                className="mb-8"
+                id="standard-basic"
+                label="Calculator uses"
+                variant="standard"
+              />
+              <Button
+                className="shadow-sm font-bold w-full py-4 px-4 text-green-800 border-green-400 hover:border-green-400 bg-green-400 hover:bg-green-500"
+                variant="outlined"
+                color="primary"
+                size="medium"
+                href="/"
+                target="_blank"
+              >
+                Calculate
+              </Button>
             </div>
           </div>
         </div>
