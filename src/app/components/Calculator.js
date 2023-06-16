@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import Head from "next/head"
 import Button from "@mui/material/Button"
 import { RiPlantFill } from "react-icons/ri/"
@@ -9,8 +10,18 @@ import AccordionDetails from "@mui/material/AccordionDetails"
 import Typography from "@mui/material/Typography"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 import TextField from "@mui/material/TextField"
+import FormControl from "@mui/material/FormControl"
+import InputLabel from "@mui/material/InputLabel"
+import Select from "@mui/material/Select"
+import MenuItem from "@mui/material/MenuItem"
 
-export default function Home() {
+export default function Calculate() {
+  const [country, setCountry] = useState("")
+
+  const handleChange = (event) => {
+    setCountry(event.target.value)
+  }
+
   return (
     <>
       <Head>
@@ -188,27 +199,39 @@ export default function Home() {
           <div className="flex flex-col md:w-1/3 mx-auto">
             <h3 className="pt-4 px-8 font-bold text-xl">Calculator</h3>
             <div className="flex flex-col p-8 gap-4 -my-6">
-              <TextField
-                className="border-b-4"
-                id="standard-basic"
-                label="Country"
-                variant="standard"
-              />
+              <FormControl variant="standard">
+                <InputLabel id="">Country</InputLabel>
+                <Select
+                  labelId=""
+                  id=""
+                  value={country}
+                  onChange={handleChange}
+                  label="Country"
+                  color="success"
+                >
+                  <MenuItem value={"Brazil"}>Brazil</MenuItem>
+                  <MenuItem value={"China"}>China</MenuItem>
+                  <MenuItem value={"Peru"}>Peru</MenuItem>
+                </Select>
+              </FormControl>
               <TextField
                 id="standard-basic"
                 label="General or specific impacts?"
                 variant="standard"
+                color="success"
               />
               <div className="flex grid-cols-2 gap-4">
                 <TextField
                   id="standard-basic"
                   label="State"
                   variant="standard"
+                  color="success"
                 />
                 <TextField
                   id="standard-basic"
                   label="Region"
                   variant="standard"
+                  color="success"
                 />
               </div>
               <div className="flex grid-cols-2 gap-4">
@@ -216,40 +239,47 @@ export default function Home() {
                   id="standard-basic"
                   label="Extraction type"
                   variant="standard"
+                  color="success"
                 />
                 <TextField
                   id="standard-basic"
                   label="Is a retort used to reduce the dispersion of mercury?"
                   variant="standard"
+                  color="success"
                 />
               </div>
               <TextField
                 id="standard-basic"
                 label="Unit(s) of measurement"
                 variant="standard"
+                color="success"
               />
               <div className="flex grid-cols-2 gap-4">
                 <TextField
                   id="standard-basic"
                   label="Hectare(s)"
                   variant="standard"
+                  color="success"
                 />
                 <TextField
                   id="standard-basic"
                   label="Pit depth"
                   variant="standard"
+                  color="success"
                 />
               </div>
               <TextField
                 id="standard-basic"
                 label="Accumulated inflation since January 2022 (%)"
                 variant="standard"
+                color="success"
               />
               <TextField
                 className="mb-8"
                 id="standard-basic"
                 label="Calculator uses"
                 variant="standard"
+                color="success"
               />
               <Button
                 className="shadow-sm font-bold w-full py-4 px-4 mb-6 text-green-800 border-green-400 hover:border-green-400 bg-green-400 hover:bg-green-500"
