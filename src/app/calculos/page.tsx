@@ -1,13 +1,13 @@
 "use client"
 
 import { useEffect } from "react"
-import woodAndNonWoodProducts from "../../calculations/useCalculator/useDesforestation/woodAndNonWoodProducts"
+import recoveryOfTopsoil from "../../calculations/useCalculator/useDesforestation/recoverOfTopsoil"
 
 export default function Calculos() {
   useEffect(() => {
-    const woodAndNonWoodProducts1 = woodAndNonWoodProducts()
+    const recoveryOfTopsoil1 = recoveryOfTopsoil()
 
-    console.log("TotalwoodAndNonWoodProducts", woodAndNonWoodProducts1)
+    console.log("TotalrecoveryOfTopsoil", recoveryOfTopsoil1)
   }, [])
   return <h1>test a</h1>
 }
