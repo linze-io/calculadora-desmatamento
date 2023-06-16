@@ -4,12 +4,12 @@ import vpl from "../../utils/vpl"
 const woodAndNonWoodProducts = () => {
   //Dado de input
   const hectare = 1
-/*
+  /*
   Sessão discartada, pois iremos utilizar um valor fixo como foi feito na calculadora de mineração
 
-  //Dados fixos
+  
   //const pmnmPorHa = 1
-  const txDisconto = 0.03
+  
   const m3PorHaMaderia = 30
   const reaisPorM3Madeira = 59
   const qtdAnos = 30
@@ -30,7 +30,9 @@ const woodAndNonWoodProducts = () => {
   console.log("custoTotalPMNMporHaReais", custoTotalPMNMporHaReais)
   */
 
+  //Dados fixos
   const custoTotalPMNMporHaReais = 764
+  const txDisconto = 0.03
 
   //função que faz o calculo montante utilizando o valor de custoTotalPMNMporHaReais
   const amounts = calcMontante(custoTotalPMNMporHaReais)

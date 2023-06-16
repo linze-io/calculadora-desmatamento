@@ -2,7 +2,6 @@ import calcMontante from "../../utils/calcMontante"
 import vpl from "../../utils/vpl"
 
 const culturedAndSpecies = () => {
-
   //Dado de input
   const hectare = 1
 
