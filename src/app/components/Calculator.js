@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+//import { useState } from "react"
 import Head from "next/head"
 import Button from "@mui/material/Button"
 import { RiPlantFill } from "react-icons/ri/"
@@ -16,10 +16,13 @@ import Select from "@mui/material/Select"
 import MenuItem from "@mui/material/MenuItem"
 
 export default function Calculate() {
-  const [country, setCountry] = useState("")
+  //add form variables here
+  //const [country, setCountry] = useState("")
 
   const handleChange = (event) => {
-    setCountry(event.target.value)
+    //add set functions
+    //setCountry(event.target.value)
+    console.log(event);
   }
 
   return (
@@ -200,11 +203,13 @@ export default function Calculate() {
             <h3 className="pt-4 px-8 font-bold text-xl">Calculator</h3>
             <div className="flex flex-col p-8 gap-4 -my-6">
               <FormControl variant="standard">
-                <InputLabel id="">Country</InputLabel>
+                <InputLabel id="" color="success">
+                  Country
+                </InputLabel>
                 <Select
                   labelId=""
                   id=""
-                  value={country}
+                  //value={country}
                   onChange={handleChange}
                   label="Country"
                   color="success"
@@ -214,59 +219,133 @@ export default function Calculate() {
                   <MenuItem value={"Peru"}>Peru</MenuItem>
                 </Select>
               </FormControl>
-              <TextField
-                id="standard-basic"
-                label="General or specific impacts?"
-                variant="standard"
-                color="success"
-              />
-              <div className="flex grid-cols-2 gap-4">
-                <TextField
-                  id="standard-basic"
-                  label="State"
-                  variant="standard"
+              <FormControl variant="standard">
+                <InputLabel id="" color="success">
+                  General or specific impacts?
+                </InputLabel>
+                <Select
+                  labelId=""
+                  id=""
+                  //value={country}
+                  onChange={handleChange}
+                  label="Country"
                   color="success"
-                />
-                <TextField
-                  id="standard-basic"
-                  label="Region"
-                  variant="standard"
-                  color="success"
-                />
+                >
+                  <MenuItem value={"1"}>Impacts in specific place</MenuItem>
+                  <MenuItem value={"2"}>Average General impacts</MenuItem>
+                </Select>
+              </FormControl>
+              <div className="flex grid-cols-2 gap-4 justify-between">
+                <FormControl className="w-full" variant="standard">
+                  <InputLabel id="" color="success">
+                    State
+                  </InputLabel>
+                  <Select
+                    labelId=""
+                    id=""
+                    //value={country}
+                    onChange={handleChange}
+                    label="Country"
+                    color="success"
+                  >
+                    <MenuItem value={"DF"}>DF</MenuItem>
+                    <MenuItem value={"SC"}>SC</MenuItem>
+                    <MenuItem value={"MG"}>MG</MenuItem>
+                  </Select>
+                </FormControl>
+                <FormControl className="w-full" variant="standard">
+                  <InputLabel id="" color="success">
+                    Region
+                  </InputLabel>
+                  <Select
+                    labelId=""
+                    id=""
+                    //value={country}
+                    onChange={handleChange}
+                    label="Country"
+                    color="success"
+                  >
+                    <MenuItem value={"DF"}>DF</MenuItem>
+                    <MenuItem value={"SC"}>SC</MenuItem>
+                    <MenuItem value={"MG"}>MG</MenuItem>
+                  </Select>
+                </FormControl>
               </div>
-              <div className="flex grid-cols-2 gap-4">
-                <TextField
-                  id="standard-basic"
-                  label="Extraction type"
-                  variant="standard"
-                  color="success"
-                />
-                <TextField
-                  id="standard-basic"
-                  label="Is a retort used to reduce the dispersion of mercury?"
-                  variant="standard"
-                  color="success"
-                />
+              <div className="flex grid-cols-2 gap-4 justify-between">
+                <FormControl className="w-full" variant="standard">
+                  <InputLabel id="" color="success">
+                    Extraction type
+                  </InputLabel>
+                  <Select
+                    labelId=""
+                    id=""
+                    //value={country}
+                    onChange={handleChange}
+                    label="Country"
+                    color="success"
+                  >
+                    <MenuItem value={"Alluvial"}>Alluvial</MenuItem>
+                    <MenuItem value={"Dredge Boats"}>Dredge Boats</MenuItem>
+                    <MenuItem value={"Pit"}>Pit</MenuItem>
+                  </Select>
+                </FormControl>
+                <FormControl className="w-full" variant="standard">
+                  <InputLabel id="" color="success">
+                    Is a retort used?
+                  </InputLabel>
+                  <Select
+                    labelId=""
+                    id=""
+                    //value={country}
+                    onChange={handleChange}
+                    label="Retort"
+                    color="success"
+                  >
+                    <MenuItem value={"DF"}>Yes</MenuItem>
+                    <MenuItem value={"SC"}>No</MenuItem>
+                  </Select>
+                </FormControl>
               </div>
-              <TextField
-                id="standard-basic"
-                label="Unit(s) of measurement"
-                variant="standard"
-                color="success"
-              />
-              <div className="flex grid-cols-2 gap-4">
+              <FormControl className="w-full" variant="standard">
+                <InputLabel id="" color="success">
+                  State
+                </InputLabel>
+                <Select
+                  labelId=""
+                  id=""
+                  //value={country}
+                  onChange={handleChange}
+                  label="Unit(s) of measurement"
+                  color="success"
+                >
+                  <MenuItem value={"Mining size"}>Mining size</MenuItem>
+                  <MenuItem value={"Amount of gold"}>Amount of gold</MenuItem>
+                </Select>
+              </FormControl>
+              <div className="flex grid-cols-2 gap-4 justify-between">
                 <TextField
                   id="standard-basic"
                   label="Hectare(s)"
                   variant="standard"
                   color="success"
+                  className="w-full"
                 />
-                <TextField
-                  id="standard-basic"
-                  label="Pit depth"
-                  variant="standard"
-                  color="success"
-                />
+                <FormControl className="w-full" variant="standard">
+                  <InputLabel id="" color="success">
+                    Is a retort used?
+                  </InputLabel>
+                  <Select
+                    labelId=""
+                    id=""
+                    //value={country}
+                    onChange={handleChange}
+                    label="Retort"
+                    color="success"
+                  >
+                    <MenuItem value={"DF"}>Yes</MenuItem>
+                    <MenuItem value={"SC"}>No</MenuItem>
+                  </Select>
+                </FormControl>
               </div>
               <TextField
                 id="standard-basic"
@@ -274,15 +353,29 @@ export default function Calculate() {
                 variant="standard"
                 color="success"
               />
-              <TextField
-                className="mb-8"
-                id="standard-basic"
-                label="Calculator uses"
-                variant="standard"
-                color="success"
-              />
+              <FormControl className="w-full" variant="standard">
+                <InputLabel id="" color="success">
+                  Calculator uses
+                </InputLabel>
+                <Select
+                  labelId=""
+                  id=""
+                  //value={country}
+                  onChange={handleChange}
+                  label="Calculator uses"
+                  color="success"
+                >
+                  <MenuItem value={"Estimate values"}>Estimate values</MenuItem>
+                  <MenuItem value={"Estimate efficient investments"}>
+                    Estimate efficient investments
+                  </MenuItem>
+                  <MenuItem value={"Mercury free technology"}>
+                    Mercury free technology
+                  </MenuItem>
+                </Select>
+              </FormControl>
               <Button
-                className="shadow-sm font-bold w-full py-4 px-4 mb-6 text-green-800 border-green-400 hover:border-green-400 bg-green-400 hover:bg-green-500"
+                className="shadow-sm font-bold w-full py-4 px-4 my-6 text-green-800 border-green-400 hover:border-green-400 bg-green-400 hover:bg-green-500"
                 variant="outlined"
                 color="primary"
                 size="medium"
