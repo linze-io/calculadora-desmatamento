@@ -2,9 +2,6 @@ import calcMontante from "../../utils/calcMontante"
 import vpl from "../../utils/vpl"
 
 const culturedAndSpecies = () => {
-  // const { general, bioprospecting } = fixedCalcultions(country_region)
-  // const { discountRate } = bioprospecting
-  // const { temperaturaCelsius, percapitaPIBBrasilEmUSD } = general
 
   //Dado de input
   const hectare = 1
