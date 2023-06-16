@@ -43,9 +43,12 @@ const carbon = () => {
   const multi_TxCambio_custoCarbono_saldoCarbonoPorHa =
     txCambio * custoCarbonoPorHaUSD * saldoCarbonoPorHa
 
-
   //Função PGTO
-  const carbonoPGTOReais = calcularPagamentoPeriodico(multi_TxCambio_custoCarbono_saldoCarbonoPorHa, txDisconto, qtdAnos)
+  const carbonoPGTOReais = calcularPagamentoPeriodico(
+    multi_TxCambio_custoCarbono_saldoCarbonoPorHa,
+    txDisconto,
+    qtdAnos
+  )
 
   const amounts = calcMontante(carbonoPGTOReais)
 
