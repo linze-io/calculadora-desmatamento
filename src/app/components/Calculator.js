@@ -10,12 +10,8 @@ import Typography from "@mui/material/Typography"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 import TextField from "@mui/material/TextField"
 
-//import videoCover from '.././public/images/teste2.png'
+//import React from "react"
 
-import React from "react"
-//import ReactPlayer from 'react-player/youtube'
-
-//const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
@@ -196,6 +192,7 @@ export default function Home() {
             <h3 className="pt-4 px-8 font-bold text-xl">Calculator</h3>
             <div className="flex flex-col p-8 gap-4 -my-6">
               <TextField
+                className="border-b-4"
                 id="standard-basic"
                 label="Country"
                 variant="standard"
@@ -258,7 +255,7 @@ export default function Home() {
                 variant="standard"
               />
               <Button
-                className="shadow-sm font-bold w-full py-4 px-4 text-green-800 border-green-400 hover:border-green-400 bg-green-400 hover:bg-green-500"
+                className="shadow-sm font-bold w-full py-4 px-4 mb-6 text-green-800 border-green-400 hover:border-green-400 bg-green-400 hover:bg-green-500"
                 variant="outlined"
                 color="primary"
                 size="medium"

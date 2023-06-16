@@ -4,12 +4,9 @@ import Head from "next/head"
 import Button from "@mui/material/Button"
 import { RiPlantFill } from "react-icons/ri/"
 
-//import videoCover from '.././public/images/teste2.png'
 
 import React from "react"
-//import ReactPlayer from 'react-player/youtube'
 
-//const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
