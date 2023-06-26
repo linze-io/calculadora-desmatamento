@@ -4,11 +4,11 @@ import Link from "next/link"
 export default function Navbar() {
   return (
     <div className="sticky top-0 flex py-4 px-10 bg-black bg-opacity-90 z-10">
-      <div className="w-full flex-none md:flex justify-between">
+      <div className="w-full flex-none md:flex justify-between items-center">
         <div className="justify-start items-end">
           {" "}
           {/*Left area*/}
-          <div className="flex items-baseline">
+          <div className="flex items-center gap-4">
             <button>
               <Link href="/">
                 <Image
@@ -20,6 +20,7 @@ export default function Navbar() {
                 />
               </Link>
             </button>
+            <span className="text-white font-bold text-2xl">Calculadora do Desmatamento</span>
           </div>
         </div>
 

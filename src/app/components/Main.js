@@ -34,13 +34,13 @@ export default function Home() {
               <div className="flex mx-auto gap-8">
                 <Button
                   sx={{
-                    backgroundColor: '#4ade80',
-                    '&:hover': {
-                      backgroundColor: '#dcfce7',
+                    backgroundColor: "#4ade80",
+                    "&:hover": {
+                      backgroundColor: "#dcfce7",
                     },
-                    padding: '16px 32px',
-                    color: '#052e16',
-                    fontWeight: 'normal',
+                    padding: "16px 32px",
+                    color: "#052e16",
+                    fontWeight: "normal",
                   }}
                   variant="contained"
                   color="primary"
@@ -52,13 +52,13 @@ export default function Home() {
                 </Button>
                 <Button
                   sx={{
-                    backgroundColor: '#4ade80',
-                    '&:hover': {
-                      backgroundColor: '#dcfce7',
+                    backgroundColor: "#4ade80",
+                    "&:hover": {
+                      backgroundColor: "#dcfce7",
                     },
-                    padding: '16px 32px',
-                    color: '#052e16',
-                    fontWeight: 'normal',
+                    padding: "16px 32px",
+                    color: "#052e16",
+                    fontWeight: "normal",
                   }}
                   variant="contained"
                   color="primary"
@@ -135,20 +135,20 @@ export default function Home() {
                 <div className="p-10 text-center w-full">
                   <Button
                     sx={{
-                      boxShadow: 'sm',
-                      fontWeight: 'bold',
-                      width: '100%',
-                      maxWidth: '50%',
-                      padding: '16px',
-                      color: '#166534',
-                      borderColor: '#4ade80',
-                      '&:hover': {
-                        borderColor: '#4ade80',
-                        backgroundColor: '#22c55e',
+                      boxShadow: "sm",
+                      fontWeight: "bold",
+                      width: "100%",
+                      maxWidth: "50%",
+                      padding: "16px",
+                      color: "#166534",
+                      borderColor: "#4ade80",
+                      "&:hover": {
+                        borderColor: "#4ade80",
+                        backgroundColor: "#22c55e",
                       },
-                      backgroundColor: '#4ade80',
-                      '&:hover:not(:disabled)': {
-                        backgroundColor: '#22c55e',
+                      backgroundColor: "#4ade80",
+                      "&:hover:not(:disabled)": {
+                        backgroundColor: "#22c55e",
                       },
                     }}
                     variant="outlined"
@@ -174,22 +174,22 @@ export default function Home() {
                   infraestrutura, como estradas e pistas de pouso
                 </div>
                 <div className="p-10 text-center w-full">
-                <Button
+                  <Button
                     sx={{
-                      boxShadow: 'sm',
-                      fontWeight: 'bold',
-                      width: '100%',
-                      maxWidth: '50%',
-                      padding: '16px',
-                      color: '#166534',
-                      borderColor: '#4ade80',
-                      '&:hover': {
-                        borderColor: '#4ade80',
-                        backgroundColor: '#22c55e',
+                      boxShadow: "sm",
+                      fontWeight: "bold",
+                      width: "100%",
+                      maxWidth: "50%",
+                      padding: "16px",
+                      color: "#166534",
+                      borderColor: "#4ade80",
+                      "&:hover": {
+                        borderColor: "#4ade80",
+                        backgroundColor: "#22c55e",
                       },
-                      backgroundColor: '#4ade80',
-                      '&:hover:not(:disabled)': {
-                        backgroundColor: '#22c55e',
+                      backgroundColor: "#4ade80",
+                      "&:hover:not(:disabled)": {
+                        backgroundColor: "#22c55e",
                       },
                     }}
                     variant="outlined"

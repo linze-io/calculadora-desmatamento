@@ -378,20 +378,20 @@ export default function Calculate() {
               </FormControl>
               <Button
                 sx={{
-                  boxShadow: 'sm',
-                  fontWeight: 'bold',
-                  width: '100%',
-                  padding: '16px',
-                  marginY: '32px', 
-                  color: '#166534',
-                  borderColor: '#4ade80',
-                  '&:hover': {
-                    borderColor: '#4ade80',
-                    backgroundColor: '#22c55e',
+                  boxShadow: "sm",
+                  fontWeight: "bold",
+                  width: "100%",
+                  padding: "16px",
+                  marginY: "32px",
+                  color: "#166534",
+                  borderColor: "#4ade80",
+                  "&:hover": {
+                    borderColor: "#4ade80",
+                    backgroundColor: "#22c55e",
                   },
-                  backgroundColor: '#4ade80',
-                  '&:hover:not(:disabled)': {
-                    backgroundColor: '#22c55e',
+                  backgroundColor: "#4ade80",
+                  "&:hover:not(:disabled)": {
+                    backgroundColor: "#22c55e",
                   },
                 }}
                 variant="outlined"
