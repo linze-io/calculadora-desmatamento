@@ -40,40 +40,40 @@ export default function Calculate() {
           //style={{ backgroundImage: `url("/images/test1.png")` }}
         >
           <div className="flex mx-auto items-center border-b-0 border-black">
-          <div className="flex mx-auto items-center border-b-8 border-black">
-            <div className="flex flex-col lg:flex-row w-full items-center justify-between text-white pt-16 lg:pt-48 pb-10 px-4 lg:px-10 lg:pb-40 gap-10 lg:gap-0">
-              <h1 className="text-2xl lg:text-4xl font-light text-left mb-0 pt-0 lg:w-1/2">
-                The{" "}
-                <span className="font-bold">
-                  Deforestation Impacts Calculator
-                </span>{" "}
-                is a tool to assess the social and environmental damage caused
-                by forest logging in the Amazon
-              </h1>
-              <div className="hidden mx-auto gap-8">
-                <Button
-                  className="bg-green-400 hover:bg-green-100 py-4 px-8 text-green-900 font-bold"
-                  variant="contained"
-                  color="primary"
-                  size="large"
-                  href="/"
-                  target="_blank"
-                >
-                  CALCULATOR
-                </Button>
-                <Button
-                  className="bg-green-400 hover:bg-green-100 py-4 px-8 text-green-900 font-bold"
-                  variant="contained"
-                  color="primary"
-                  size="large"
-                  href="/"
-                  target="_blank"
-                >
-                  GUIA DE USO
-                </Button>
+            <div className="flex mx-auto items-center border-b-8 border-black">
+              <div className="flex flex-col lg:flex-row w-full items-center justify-between text-white pt-16 lg:pt-48 pb-10 px-4 lg:px-10 lg:pb-40 gap-10 lg:gap-0">
+                <h1 className="text-2xl lg:text-4xl font-light text-left mb-0 pt-0 lg:w-1/2">
+                  The{" "}
+                  <span className="font-bold">
+                    Deforestation Impacts Calculator
+                  </span>{" "}
+                  is a tool to assess the social and environmental damage caused
+                  by forest logging in the Amazon
+                </h1>
+                <div className="hidden mx-auto gap-8">
+                  <Button
+                    className="bg-green-400 hover:bg-green-100 py-4 px-8 text-green-900 font-bold"
+                    variant="contained"
+                    color="primary"
+                    size="large"
+                    href="/"
+                    target="_blank"
+                  >
+                    CALCULATOR
+                  </Button>
+                  <Button
+                    className="bg-green-400 hover:bg-green-100 py-4 px-8 text-green-900 font-bold"
+                    variant="contained"
+                    color="primary"
+                    size="large"
+                    href="/"
+                    target="_blank"
+                  >
+                    GUIA DE USO
+                  </Button>
+                </div>
               </div>
             </div>
-          </div>
           </div>
         </div>
 
@@ -377,7 +377,23 @@ export default function Calculate() {
                 </Select>
               </FormControl>
               <Button
-                className="shadow-sm font-bold w-full py-4 px-4 my-6 text-green-800 border-green-400 hover:border-green-400 bg-green-400 hover:bg-green-500"
+                sx={{
+                  boxShadow: 'sm',
+                  fontWeight: 'bold',
+                  width: '100%',
+                  padding: '16px',
+                  marginY: '32px', 
+                  color: '#166534',
+                  borderColor: '#4ade80',
+                  '&:hover': {
+                    borderColor: '#4ade80',
+                    backgroundColor: '#22c55e',
+                  },
+                  backgroundColor: '#4ade80',
+                  '&:hover:not(:disabled)': {
+                    backgroundColor: '#22c55e',
+                  },
+                }}
                 variant="outlined"
                 color="primary"
                 size="medium"

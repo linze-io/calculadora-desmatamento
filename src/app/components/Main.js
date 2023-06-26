@@ -33,22 +33,38 @@ export default function Home() {
               </h1>
               <div className="flex mx-auto gap-8">
                 <Button
-                  className="bg-green-400 hover:bg-green-100 py-4 px-8 text-green-900 font-bold"
+                  sx={{
+                    backgroundColor: '#4ade80',
+                    '&:hover': {
+                      backgroundColor: '#dcfce7',
+                    },
+                    padding: '16px 32px',
+                    color: '#052e16',
+                    fontWeight: 'normal',
+                  }}
                   variant="contained"
                   color="primary"
                   size="large"
-                  href="/"
-                  target="_blank"
+                  href="/calculator"
+                  target="_self"
                 >
                   CALCULATOR
                 </Button>
                 <Button
-                  className="bg-green-400 hover:bg-green-100 py-4 px-8 text-green-900 font-bold"
+                  sx={{
+                    backgroundColor: '#4ade80',
+                    '&:hover': {
+                      backgroundColor: '#dcfce7',
+                    },
+                    padding: '16px 32px',
+                    color: '#052e16',
+                    fontWeight: 'normal',
+                  }}
                   variant="contained"
                   color="primary"
                   size="large"
-                  href="/"
-                  target="_blank"
+                  href="/calculator"
+                  target="_self"
                 >
                   GUIA DE USO
                 </Button>
@@ -118,7 +134,23 @@ export default function Home() {
                 </div>
                 <div className="p-10 text-center w-full">
                   <Button
-                    className="shadow-sm font-bold w-full lg:w-1/2 py-4 px-4 text-green-800 border-green-400 hover:border-green-400 bg-green-400 hover:bg-green-500"
+                    sx={{
+                      boxShadow: 'sm',
+                      fontWeight: 'bold',
+                      width: '100%',
+                      maxWidth: '50%',
+                      padding: '16px',
+                      color: '#166534',
+                      borderColor: '#4ade80',
+                      '&:hover': {
+                        borderColor: '#4ade80',
+                        backgroundColor: '#22c55e',
+                      },
+                      backgroundColor: '#4ade80',
+                      '&:hover:not(:disabled)': {
+                        backgroundColor: '#22c55e',
+                      },
+                    }}
                     variant="outlined"
                     color="primary"
                     size="medium"
@@ -142,8 +174,24 @@ export default function Home() {
                   infraestrutura, como estradas e pistas de pouso
                 </div>
                 <div className="p-10 text-center w-full">
-                  <Button
-                    className="shadow-sm font-bold w-full lg:w-1/2 py-4 px-4 text-green-800 border-green-400 hover:border-green-400 bg-green-400 hover:bg-green-500"
+                <Button
+                    sx={{
+                      boxShadow: 'sm',
+                      fontWeight: 'bold',
+                      width: '100%',
+                      maxWidth: '50%',
+                      padding: '16px',
+                      color: '#166534',
+                      borderColor: '#4ade80',
+                      '&:hover': {
+                        borderColor: '#4ade80',
+                        backgroundColor: '#22c55e',
+                      },
+                      backgroundColor: '#4ade80',
+                      '&:hover:not(:disabled)': {
+                        backgroundColor: '#22c55e',
+                      },
+                    }}
                     variant="outlined"
                     color="primary"
                     size="medium"
