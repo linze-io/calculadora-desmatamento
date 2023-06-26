@@ -20,7 +20,9 @@ export default function Navbar() {
                 />
               </Link>
             </button>
-            <span className="text-white font-bold text-2xl">Calculadora do Desmatamento</span>
+            <span className="text-white font-bold text-2xl">
+              Calculadora do Desmatamento
+            </span>
           </div>
         </div>
 
