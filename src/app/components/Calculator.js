@@ -40,8 +40,9 @@ export default function Calculate() {
           //style={{ backgroundImage: `url("/images/test1.png")` }}
         >
           <div className="flex mx-auto items-center border-b-0 border-black">
-            <div className="flex flex-col md:flex-row w-full items-center justify-between text-white pt-16 md:pt-48 pb-10 px-4 md:px-10 md:pb-28 lg:pb-40 gap-10 md:gap-0">
-              <h1 className=" text-2xl md:text-4xl font-light text-left mb-4 pt-0 md:w-1/2">
+          <div className="flex mx-auto items-center border-b-8 border-black">
+            <div className="flex flex-col lg:flex-row w-full items-center justify-between text-white pt-16 lg:pt-48 pb-10 px-4 lg:px-10 lg:pb-40 gap-10 lg:gap-0">
+              <h1 className="text-2xl lg:text-4xl font-light text-left mb-0 pt-0 lg:w-1/2">
                 The{" "}
                 <span className="font-bold">
                   Deforestation Impacts Calculator
@@ -49,7 +50,7 @@ export default function Calculate() {
                 is a tool to assess the social and environmental damage caused
                 by forest logging in the Amazon
               </h1>
-              <div className="flex mx-auto gap-8">
+              <div className="hidden mx-auto gap-8">
                 <Button
                   className="bg-green-400 hover:bg-green-100 py-4 px-8 text-green-900 font-bold"
                   variant="contained"
@@ -72,6 +73,7 @@ export default function Calculate() {
                 </Button>
               </div>
             </div>
+          </div>
           </div>
         </div>
 
