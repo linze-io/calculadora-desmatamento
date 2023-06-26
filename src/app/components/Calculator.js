@@ -22,7 +22,7 @@ export default function Calculate() {
   const handleChange = (event) => {
     //add set functions
     //setCountry(event.target.value)
-    console.log(event);
+    console.log(event)
   }
 
   return (

@@ -22,8 +22,8 @@ export default function Home() {
           //style={{ backgroundImage: `url("/images/test1.png")` }}
         >
           <div className="flex mx-auto items-center border-b-8 border-black">
-            <div className="flex flex-col md:flex-row w-full items-center justify-between text-white pt-16 md:pt-48 pb-10 px-4 md:px-10 md:pb-28 lg:pb-40 gap-10 md:gap-0">
-              <h1 className=" text-2xl md:text-4xl font-light text-left mb-4 pt-0 md:w-1/2">
+            <div className="flex flex-col lg:flex-row w-full items-center justify-between text-white pt-16 lg:pt-48 pb-10 px-4 lg:px-10 lg:pb-40 gap-10 lg:gap-0">
+              <h1 className="text-2xl lg:text-4xl font-light text-left mb-0 pt-0 lg:w-1/2">
                 The{" "}
                 <span className="font-bold">
                   Deforestation Impacts Calculator
@@ -102,23 +102,23 @@ export default function Home() {
           <RiPlantFill /> Entenda os impactos do desmatamento
         </h1>
 
-        <div className="mt-0 pt-0 pb-0 px-4 md:px-0 border-y-8 border-black">
+        <div className="mt-0 pt-0 pb-0 px-4 lg:px-0 border-y-8 border-black">
           <div className="mx-auto p-0">
-            <div className="flex flex-col md:flex-row justify-between p-0 gap-0">
-              <div className="flex flex-col justify-between bg-white border-b-4 md:border-b-0 p-0 gap-4 shadow-none md:w-1/2 md:border-r-8 border-black">
+            <div className="flex flex-col lg:flex-row justify-between p-0 gap-0">
+              <div className="flex flex-col justify-between bg-white border-b-4 lg:border-b-0 p-0 gap-4 shadow-none lg:w-1/2 lg:border-r-8 border-black">
                 <div>
-                  <img className="w-16 mx-auto pt-8" src="/images/ico1.svg" />
-                  <div className="w-1/2 md:w-2/3 mx-auto text-2xl md:text-3xl font-bold mt-0 border-b-2 border-black px-4 py-4 text-center">
+                  <img className="h-32 mx-auto pt-8" src="/images/ico1.svg" />
+                  <div className="w-1/2 lg:w-2/3 mx-auto text-2xl xl:text-3xl font-bold mt-0 border-b-2 border-black px-4 py-4 text-center">
                     Restauração
                   </div>
                 </div>
-                <div className="text-center px-6 md:w-2/3 mx-auto text-2xl">
+                <div className="text-center px-6 lg:w-2/3 mx-auto text-2xl mt-4">
                   Áreas são abertas para escavação e para a construção de
                   infraestrutura, como estradas e pistas de pouso
                 </div>
                 <div className="p-10 text-center w-full">
                   <Button
-                    className="shadow-sm font-bold w-full md:w-1/4 py-4 px-4 text-green-800 border-green-400 hover:border-green-400 bg-green-400 hover:bg-green-500"
+                    className="shadow-sm font-bold w-full lg:w-1/2 py-4 px-4 text-green-800 border-green-400 hover:border-green-400 bg-green-400 hover:bg-green-500"
                     variant="outlined"
                     color="primary"
                     size="medium"
@@ -130,20 +130,20 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex flex-col justify-between bg-white border-0 p-0 gap-4 shadow-none md:w-1/2 border-r-0 border-black">
+              <div className="flex flex-col justify-between bg-white border-0 p-0 gap-4 shadow-none lg:w-1/2 border-r-0 border-black">
                 <div>
-                  <img className="w-16 mx-auto pt-8" src="/images/ico2.svg" />
-                  <div className="w-1/2 md:w-2/3 mx-auto text-2xl md:text-3xl font-bold mt-0 border-b-2 border-black px-4 py-4 text-center">
+                  <img className="h-32 mx-auto pt-8" src="/images/ico2.svg" />
+                  <div className="w-1/2 lg:w-2/3 mx-auto text-2xl xl:text-3xl font-bold mt-0 border-b-2 border-black px-4 py-4 text-center">
                     Serviços Ecossistêmicos
                   </div>
                 </div>
-                <div className="text-center px-6 md:w-2/3 mx-auto text-2xl">
+                <div className="text-center px-6 lg:w-2/3 mx-auto text-2xl mt-4">
                   Áreas são abertas para escavação e para a construção de
                   infraestrutura, como estradas e pistas de pouso
                 </div>
                 <div className="p-10 text-center w-full">
                   <Button
-                    className="shadow-sm font-bold w-full md:w-1/4 py-4 px-4 text-green-800 border-green-400 hover:border-green-400 bg-green-400 hover:bg-green-500"
+                    className="shadow-sm font-bold w-full lg:w-1/2 py-4 px-4 text-green-800 border-green-400 hover:border-green-400 bg-green-400 hover:bg-green-500"
                     variant="outlined"
                     color="primary"
                     size="medium"
