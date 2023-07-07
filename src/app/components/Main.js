@@ -19,7 +19,7 @@ export default function Home() {
       <main className="-mt-40">
         <div
           className="pt-32 bg-cover bg-center px-5 lg:px-0 bg-black"
-          //style={{ backgroundImage: `url("/images/test1.png")` }}
+          style={{ backgroundImage: `url("/images/img1.webp")` }}
         >
           <div className="flex mx-auto items-center border-b-8 border-black">
             <div className="flex flex-col lg:flex-row w-full items-center justify-between text-white pt-16 lg:pt-48 pb-10 px-4 lg:px-10 lg:pb-40 gap-10 lg:gap-0">
