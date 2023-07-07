@@ -201,20 +201,53 @@ export default function Calculate() {
             </div>
           </div>
 
-          <div className="flex flex-col w-full md:w-1/3 mx-auto">
+          <div className="flex flex-col md:w-1/3 mx-auto">
             <h3 className="pt-4 px-8 font-bold text-xl">Calculator</h3>
             <div className="flex flex-col p-8 gap-4 -my-6">
+              <FormControl variant="standard">
+                <InputLabel id="" color="success">
+                  Country
+                </InputLabel>
+                <Select
+                  labelId=""
+                  id=""
+                  //value={country}
+                  onChange={handleChange}
+                  label="Country"
+                  color="success"
+                >
+                  <MenuItem value={"Brazil"}>Brazil</MenuItem>
+                  <MenuItem value={"China"}>China</MenuItem>
+                  <MenuItem value={"Peru"}>Peru</MenuItem>
+                </Select>
+              </FormControl>
+              <FormControl variant="standard">
+                <InputLabel id="" color="success">
+                  General or specific impacts?
+                </InputLabel>
+                <Select
+                  labelId=""
+                  id=""
+                  //value={country}
+                  onChange={handleChange}
+                  label="Country"
+                  color="success"
+                >
+                  <MenuItem value={"1"}>Impacts in specific place</MenuItem>
+                  <MenuItem value={"2"}>Average General impacts</MenuItem>
+                </Select>
+              </FormControl>
               <div className="flex grid-cols-2 gap-4 justify-between">
                 <FormControl className="w-full" variant="standard">
                   <InputLabel id="" color="success">
-                    Estado
+                    State
                   </InputLabel>
                   <Select
                     labelId=""
                     id=""
                     //value={country}
                     onChange={handleChange}
-                    label="Estado"
+                    label="Country"
                     color="success"
                   >
                     <MenuItem value={"DF"}>DF</MenuItem>
@@ -224,14 +257,14 @@ export default function Calculate() {
                 </FormControl>
                 <FormControl className="w-full" variant="standard">
                   <InputLabel id="" color="success">
-                    Município
+                    Region
                   </InputLabel>
                   <Select
                     labelId=""
                     id=""
                     //value={country}
                     onChange={handleChange}
-                    label="Município"
+                    label="Country"
                     color="success"
                   >
                     <MenuItem value={"DF"}>DF</MenuItem>
@@ -241,16 +274,26 @@ export default function Calculate() {
                 </FormControl>
               </div>
               <div className="flex grid-cols-2 gap-4 justify-between">
-                <TextField
-                  id="standard-basic"
-                  label="Área(ha)"
-                  variant="standard"
-                  color="success"
-                  className="w-full"
-                />
                 <FormControl className="w-full" variant="standard">
                   <InputLabel id="" color="success">
-                    APP
+                    Extraction type
+                  </InputLabel>
+                  <Select
+                    labelId=""
+                    id=""
+                    //value={country}
+                    onChange={handleChange}
+                    label="Country"
+                    color="success"
+                  >
+                    <MenuItem value={"Alluvial"}>Alluvial</MenuItem>
+                    <MenuItem value={"Dredge Boats"}>Dredge Boats</MenuItem>
+                    <MenuItem value={"Pit"}>Pit</MenuItem>
+                  </Select>
+                </FormControl>
+                <FormControl className="w-full" variant="standard">
+                  <InputLabel id="" color="success">
+                    Is a retort used?
                   </InputLabel>
                   <Select
                     labelId=""
@@ -267,7 +310,7 @@ export default function Calculate() {
               </div>
               <FormControl className="w-full" variant="standard">
                 <InputLabel id="" color="success">
-                  Hipótese de valores
+                  State
                 </InputLabel>
                 <Select
                   labelId=""
@@ -277,58 +320,62 @@ export default function Calculate() {
                   label="Unit(s) of measurement"
                   color="success"
                 >
-                  <MenuItem value={"Conservador"}>Conservador</MenuItem>
-                  <MenuItem value={"Precaução"}>Precaução</MenuItem>
+                  <MenuItem value={"Mining size"}>Mining size</MenuItem>
+                  <MenuItem value={"Amount of gold"}>Amount of gold</MenuItem>
                 </Select>
               </FormControl>
+              <div className="flex grid-cols-2 gap-4 justify-between">
+                <TextField
+                  id="standard-basic"
+                  label="Hectare(s)"
+                  variant="standard"
+                  color="success"
+                  className="w-full"
+                />
+                <FormControl className="w-full" variant="standard">
+                  <InputLabel id="" color="success">
+                    Is a retort used?
+                  </InputLabel>
+                  <Select
+                    labelId=""
+                    id=""
+                    //value={country}
+                    onChange={handleChange}
+                    label="Retort"
+                    color="success"
+                  >
+                    <MenuItem value={"DF"}>Yes</MenuItem>
+                    <MenuItem value={"SC"}>No</MenuItem>
+                  </Select>
+                </FormControl>
+              </div>
+              <TextField
+                id="standard-basic"
+                label="Accumulated inflation since January 2022 (%)"
+                variant="standard"
+                color="success"
+              />
               <FormControl className="w-full" variant="standard">
                 <InputLabel id="" color="success">
-                  Área prioritária para preservação
+                  Calculator uses
                 </InputLabel>
                 <Select
                   labelId=""
                   id=""
                   //value={country}
                   onChange={handleChange}
-                  label="Unit(s) of measurement"
+                  label="Calculator uses"
                   color="success"
                 >
-                  <MenuItem value={"Sim"}>Sim</MenuItem>
-                  <MenuItem value={"Não"}>Não</MenuItem>
-                </Select>
-              </FormControl>              
-              <FormControl className="w-full" variant="standard">
-                <InputLabel id="" color="success">
-                  Área com potencial derecreação
-                </InputLabel>
-                <Select
-                  labelId=""
-                  id=""
-                  //value={country}
-                  onChange={handleChange}
-                  label="Unit(s) of measurement"
-                  color="success"
-                >
-                  <MenuItem value={"Sim"}>Sim</MenuItem>
-                  <MenuItem value={"Não"}>Não</MenuItem>
+                  <MenuItem value={"Estimate values"}>Estimate values</MenuItem>
+                  <MenuItem value={"Estimate efficient investments"}>
+                    Estimate efficient investments
+                  </MenuItem>
+                  <MenuItem value={"Mercury free technology"}>
+                    Mercury free technology
+                  </MenuItem>
                 </Select>
               </FormControl>
-              <FormControl className="w-full" variant="standard">
-                <InputLabel id="" color="success">
-                  Legalidade do desmatamento
-                </InputLabel>
-                <Select
-                  labelId=""
-                  id=""
-                  //value={country}
-                  onChange={handleChange}
-                  label="Unit(s) of measurement"
-                  color="success"
-                >
-                  <MenuItem value={"Legal"}>Legal</MenuItem>
-                  <MenuItem value={"Ilegal"}>Ilegal</MenuItem>
-                </Select>
-              </FormControl>            
               <Button
                 sx={{
                   boxShadow: "sm",
