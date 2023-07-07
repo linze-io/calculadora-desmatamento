@@ -296,7 +296,7 @@ export default function Calculate() {
                   <MenuItem value={"Sim"}>Sim</MenuItem>
                   <MenuItem value={"Não"}>Não</MenuItem>
                 </Select>
-              </FormControl>              
+              </FormControl>
               <FormControl className="w-full" variant="standard">
                 <InputLabel id="" color="success">
                   Área com potencial derecreação
@@ -328,7 +328,7 @@ export default function Calculate() {
                   <MenuItem value={"Legal"}>Legal</MenuItem>
                   <MenuItem value={"Ilegal"}>Ilegal</MenuItem>
                 </Select>
-              </FormControl>            
+              </FormControl>
               <Button
                 sx={{
                   boxShadow: "sm",
