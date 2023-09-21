@@ -24,12 +24,11 @@ export default function Home() {
           <div className="flex mx-auto items-center border-b-8 border-black">
             <div className="flex flex-col lg:flex-row w-full items-center justify-between text-white pt-16 lg:pt-48 pb-10 px-4 lg:px-10 lg:pb-40 gap-10 lg:gap-0">
               <h1 className="text-2xl lg:text-4xl font-light text-left mb-0 pt-0 lg:w-1/2">
-                The{" "}
+                A{" "}
                 <span className="font-bold">
-                  Deforestation Impacts Calculator
+                  Calculadora de Impactos do Desmatamento
                 </span>{" "}
-                is a tool to assess the social and environmental damage caused
-                by forest logging in the Amazon
+                  é uma ferramenta de valoração dos danos sociais e ambientais causados pelo desmatamento na Amazônia
               </h1>
               <div className="flex mx-auto gap-8">
                 <Button
@@ -48,7 +47,7 @@ export default function Home() {
                   href="/calculator"
                   target="_self"
                 >
-                  CALCULATOR
+                  GUIA DE USO
                 </Button>
                 <Button
                   sx={{
@@ -66,7 +65,7 @@ export default function Home() {
                   href="/calculator"
                   target="_self"
                 >
-                  GUIA DE USO
+                  CALCULADORA
                 </Button>
               </div>
             </div>
@@ -75,26 +74,20 @@ export default function Home() {
 
         <h1 className="flex text-2xl md:text-4xl font-bold p-10 border-b-8 border-black gap-4 items-center">
           <RiPlantFill />
-          Como funciona
+          Funções da Calculadora
         </h1>
 
         <div className="flex flex-col md:flex-row mx-0 md:mx-auto pt-0 justify-between items-center gap-10 md:gap-0">
           <div className="w-full md:w-1/2 p-10 md:border-r-8 border-black">
             <div className="mb-4 text-xl">
               <p>
-                Você pode incluir algumas informações sobre o contexto para que
-                a calculadora estime o valor dos impactos de forma mais precisa.
-                <br />A localização define outras variáveis como:
+              A Calculadora de Impactos do Desmatamento pode ser utilizada para três finalidades principais:
               </p>
               <div className="mt-4">
-                <ul>
-                  <li>- Densidade e tamanho da população afetada</li>
-
-                  <li>- Média de consumo de peixe</li>
-
-                  <li>- Custo de transporte para recuperação de áreas</li>
-
-                  <li>- Tipo de garimpo</li>
+                <ul className="flex flex-col gap-4">
+                  <li>1. Estimar valores de danos ambientais para apoiar a definição de compensações e indenizações;</li>
+                  <li>2. Estimar níveis eficientes de investimentos para planejamento e prevenção de impactos;</li>
+                  <li>3. Estimar receitas potenciais que o Estado poderia ter com seus ativos florestais.</li>
                 </ul>
               </div>
 
@@ -121,85 +114,27 @@ export default function Home() {
         <div className="mt-0 pt-0 pb-0 px-4 lg:px-0 border-y-8 border-black">
           <div className="mx-auto p-0">
             <div className="flex flex-col lg:flex-row justify-between p-0 gap-0">
-              <div className="flex flex-col justify-between bg-white border-b-4 lg:border-b-0 p-0 gap-4 shadow-none lg:w-1/2 lg:border-r-8 border-black">
+              <div className="flex flex-col justify-start bg-white border-b-4 lg:border-b-0 p-0 gap-4 shadow-none lg:w-1/2 lg:border-r-0 border-black">
                 <div>
                   <img className="h-32 mx-auto pt-8" src="/images/ico1.svg" />
                   <div className="w-1/2 lg:w-2/3 mx-auto text-2xl xl:text-3xl font-bold mt-0 border-b-2 border-black px-4 py-4 text-center">
                     Restauração
                   </div>
                 </div>
-                <div className="text-center px-6 lg:w-2/3 mx-auto text-2xl mt-4">
-                  Áreas são abertas para escavação e para a construção de
-                  infraestrutura, como estradas e pistas de pouso
-                </div>
-                <div className="p-10 text-center w-full">
-                  <Button
-                    sx={{
-                      boxShadow: "sm",
-                      fontWeight: "bold",
-                      width: "100%",
-                      maxWidth: "50%",
-                      padding: "16px",
-                      color: "#166534",
-                      borderColor: "#4ade80",
-                      "&:hover": {
-                        borderColor: "#4ade80",
-                        backgroundColor: "#22c55e",
-                      },
-                      backgroundColor: "#4ade80",
-                      "&:hover:not(:disabled)": {
-                        backgroundColor: "#22c55e",
-                      },
-                    }}
-                    variant="outlined"
-                    color="primary"
-                    size="medium"
-                    href="/"
-                    target="_blank"
-                  >
-                    Leia mais
-                  </Button>
+                <div className="text-left px-6 lg:w-2/3 mx-auto text-2xl mt-4">
+                  Refere-se aos gastos necessários para implementar os métodos necessários para restaurar o meio ambiente e promover o bem-estar humano que foi afetado.
                 </div>
               </div>
 
-              <div className="flex flex-col justify-between bg-white border-0 p-0 gap-4 shadow-none lg:w-1/2 border-r-0 border-black">
+              <div className="flex flex-col justify-start bg-white border-0 p-0 gap-4 shadow-none lg:w-1/2 border-l-8 border-black">
                 <div>
                   <img className="h-32 mx-auto pt-8" src="/images/ico2.svg" />
                   <div className="w-1/2 lg:w-2/3 mx-auto text-2xl xl:text-3xl font-bold mt-0 border-b-2 border-black px-4 py-4 text-center">
                     Serviços Ecossistêmicos
                   </div>
                 </div>
-                <div className="text-center px-6 lg:w-2/3 mx-auto text-2xl mt-4">
-                  Áreas são abertas para escavação e para a construção de
-                  infraestrutura, como estradas e pistas de pouso
-                </div>
-                <div className="p-10 text-center w-full">
-                  <Button
-                    sx={{
-                      boxShadow: "sm",
-                      fontWeight: "bold",
-                      width: "100%",
-                      maxWidth: "50%",
-                      padding: "16px",
-                      color: "#166534",
-                      borderColor: "#4ade80",
-                      "&:hover": {
-                        borderColor: "#4ade80",
-                        backgroundColor: "#22c55e",
-                      },
-                      backgroundColor: "#4ade80",
-                      "&:hover:not(:disabled)": {
-                        backgroundColor: "#22c55e",
-                      },
-                    }}
-                    variant="outlined"
-                    color="primary"
-                    size="medium"
-                    href="/"
-                    target="_blank"
-                  >
-                    Leia mais
-                  </Button>
+                <div className="text-left px-6 lg:w-2/3 mx-auto text-2xl mt-4 mb-8">
+                  As consequências do desmatamento incluem a perda de vários benefícios, tanto econômicos quanto não econômicos. Essas perdas são, primeiramente, calculadas com base nas opções alternativas de uso da terra disponíveis para os proprietários. O custo de oportunidade do desmatamento inclui a perda de recursos madeireiros e não madeireiros da floresta e , além disso, a perda de serviços culturais e recreativos, que não são comercializados diretamente no mercado. A perda de serviços ecossistêmicos, como sequestro de carbono, regulação da água e controle da erosão, proporcionados pela floresta em pé, tem um impacto significativo no bem-estar da sociedade como um todo.
                 </div>
               </div>
             </div>
