@@ -28,7 +28,8 @@ export default function Home() {
                 <span className="font-bold">
                   Calculadora de Impactos do Desmatamento
                 </span>{" "}
-                  é uma ferramenta de valoração dos danos sociais e ambientais causados pelo desmatamento na Amazônia
+                é uma ferramenta de valoração dos danos sociais e ambientais
+                causados pelo desmatamento na Amazônia
               </h1>
               <div className="flex mx-auto gap-8">
                 <Button
@@ -81,13 +82,23 @@ export default function Home() {
           <div className="w-full md:w-1/2 p-10 md:border-r-8 border-black">
             <div className="mb-4 text-xl">
               <p>
-              A Calculadora de Impactos do Desmatamento pode ser utilizada para três finalidades principais:
+                A Calculadora de Impactos do Desmatamento pode ser utilizada
+                para três finalidades principais:
               </p>
               <div className="mt-4">
                 <ul className="flex flex-col gap-4">
-                  <li>1. Estimar valores de danos ambientais para apoiar a definição de compensações e indenizações;</li>
-                  <li>2. Estimar níveis eficientes de investimentos para planejamento e prevenção de impactos;</li>
-                  <li>3. Estimar receitas potenciais que o Estado poderia ter com seus ativos florestais.</li>
+                  <li>
+                    1. Estimar valores de danos ambientais para apoiar a
+                    definição de compensações e indenizações;
+                  </li>
+                  <li>
+                    2. Estimar níveis eficientes de investimentos para
+                    planejamento e prevenção de impactos;
+                  </li>
+                  <li>
+                    3. Estimar receitas potenciais que o Estado poderia ter com
+                    seus ativos florestais.
+                  </li>
                 </ul>
               </div>
 
@@ -122,7 +133,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-left px-6 lg:w-2/3 mx-auto text-2xl mt-4">
-                  Refere-se aos gastos necessários para implementar os métodos necessários para restaurar o meio ambiente e promover o bem-estar humano que foi afetado.
+                  Refere-se aos gastos necessários para implementar os métodos
+                  necessários para restaurar o meio ambiente e promover o
+                  bem-estar humano que foi afetado.
                 </div>
               </div>
 
@@ -134,7 +147,18 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-left px-6 lg:w-2/3 mx-auto text-2xl mt-4 mb-8">
-                  As consequências do desmatamento incluem a perda de vários benefícios, tanto econômicos quanto não econômicos. Essas perdas são, primeiramente, calculadas com base nas opções alternativas de uso da terra disponíveis para os proprietários. O custo de oportunidade do desmatamento inclui a perda de recursos madeireiros e não madeireiros da floresta e , além disso, a perda de serviços culturais e recreativos, que não são comercializados diretamente no mercado. A perda de serviços ecossistêmicos, como sequestro de carbono, regulação da água e controle da erosão, proporcionados pela floresta em pé, tem um impacto significativo no bem-estar da sociedade como um todo.
+                  As consequências do desmatamento incluem a perda de vários
+                  benefícios, tanto econômicos quanto não econômicos. Essas
+                  perdas são, primeiramente, calculadas com base nas opções
+                  alternativas de uso da terra disponíveis para os
+                  proprietários. O custo de oportunidade do desmatamento inclui
+                  a perda de recursos madeireiros e não madeireiros da floresta
+                  e , além disso, a perda de serviços culturais e recreativos,
+                  que não são comercializados diretamente no mercado. A perda de
+                  serviços ecossistêmicos, como sequestro de carbono, regulação
+                  da água e controle da erosão, proporcionados pela floresta em
+                  pé, tem um impacto significativo no bem-estar da sociedade
+                  como um todo.
                 </div>
               </div>
             </div>
