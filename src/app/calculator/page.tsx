@@ -1,10 +1,10 @@
 "use client"
 
-import Calculator from "./components/Calculator"
-import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
+import Calculator from "../components/Calculator"
 
-export default function Home() {
+export default function Layout() {
   return (
     <div
       className="bg-auto bg-center pb-10"
