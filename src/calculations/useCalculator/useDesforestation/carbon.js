@@ -1,6 +1,6 @@
 import calcMontante from "../../utils/calcMontante"
 import vpl from "../../utils/vpl"
-import pgto from "../../utils/pgto"
+import calcularPagamentoPeriodico from "../../utils/pgto"
 
 const carbon = () => {
   //Dado de input
@@ -44,12 +44,11 @@ const carbon = () => {
     txCambio * custoCarbonoPorHaUSD * saldoCarbonoPorHa
 
   //Função PGTO
-  const carbonoPGTOReais = pgto(
+  const carbonoPGTOReais = calcularPagamentoPeriodico(
     multi_TxCambio_custoCarbono_saldoCarbonoPorHa,
     txDisconto,
     qtdAnos
   )
-  console.log("calcularPagamentoDesconto", carbonoPGTOReais)
 
   const amounts = calcMontante(carbonoPGTOReais)
 

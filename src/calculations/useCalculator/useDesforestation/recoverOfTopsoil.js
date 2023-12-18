@@ -1,74 +1,87 @@
-import fixedCalcultions from "hooks/fixedCalculations"
+const recoveryOfTopsoil = () => {
+  //Dado de input
+  const hectare = 1
 
-const CONSERVATIVE = 0.29
-const APPValue = false
+  //Botão "Fitofisionomia Raridade" que terá na Dashboard da calculadora
+  //Considerar botão "Fitofisionomia Raridade" setado em "Com raridade" com valor 1
+  const fitofisionomia = 1
 
-const recoveryOfTopsoil = (
-  country_region,
-  distanceanningCenter,
-  txPrevalence
-) => {
-  const { general, recoverOfTopSoll } = fixedCalcultions(country_region)
-  const {
-    kmRotatedPerLiter,
-    priceLiterDieselUSD,
-    averageDriverSalaryFreightPerKmUSD,
-  } = general
-  const {
-    soilSurfaceRecPerHa_conservative,
-    soilSurfaceRecPerHa,
-    capacityLoadTruckNumberOfSeedlings,
-    superficialSeedlingsPerHa,
-    transportCostChangesPerKm,
-  } = recoverOfTopSoll
+  //Botão "APP" que terá na Dashboard da calculadora
+  //Considerar botão "APP" setado em "SIM" com valor 1
+  const buttonAPP = 1
 
-  //Condição que será respondida pelo usuário se "SIM" ou "NÃO"
-  let hectareValue
-  if (APPValue === true) {
-    //SIM
-    //const hectareValue = hectare * 3.8
-  } else {
-    //NÃO
-    //const hectareValue = hectare
+  //Considerar botões "Fitofisionomia Raridade && APP" setados em "SIM && Com raridade" com valor 1
+
+  function calcHectareValue() {
+    if ((buttonAPP === 1 && fitofisionomia === 1) || buttonAPP === 1) {
+      return hectare * 3.8
+    } else if (fitofisionomia === 1) {
+      return hectare * 1.8
+    } else {
+      return hectare
+    }
   }
+  const hectareValue = calcHectareValue()
 
-  //Condição que será respondida pelo usuário se "Com raridade" ou "Sem Raridade"
+  //Seleção de valor de impacto "CONSERVADOR || PRINCÍPIO DA PRECAUÇÃO"
+  //Será definido como valor padrão o valor de impacto "CONSERVADOR" com valor 1, CONSERVATIVE =! 1 será "PRINCÍPIO DA PRECAUÇÃO"
+  const CONSERVATIVE = 1
+  const precoRecupSuperficialSoloporHa_conservative = 14690
+  const precoRecupSuperficialSoloporHa = 23400
 
-  const soilSurfaceRecPerHaValue =
-    txPrevalence === CONSERVATIVE
-      ? soilSurfaceRecPerHa_conservative
-      : soilSurfaceRecPerHa
+  const precoRecSuperficialHa =
+    CONSERVATIVE === 1
+      ? precoRecupSuperficialSoloporHa_conservative
+      : precoRecupSuperficialSoloporHa
+  const custoRecSuperficialSoloSemFrete = precoRecSuperficialHa * hectareValue
 
-  const numberOfPathsSuperficialSeddlindRecovery =
-    (hectareValue * superficialSeedlingsPerHa) /
-      capacityLoadTruckNumberOfSeedlings <
+  //Dinâmico por região
+  const distanciaDesmatCentro = 291.440123936341
+
+  //Dados fixos
+  const capacidadeCargaCaminhaoNumeroMudas = 2700
+  const mudasSuperficialporHa = 1667
+  const custoTransporteMudaporKmBRL = 1.6
+  const kmRodadoporLitro = 2.5
+  const precoLitroDiesel = 3.24
+  const salarioMedioMotoristaFreteporKmBRL = 2.22
+
+  const numeroCaminhoesRecupSuperficialMudas =
+    (hectareValue * mudasSuperficialporHa) /
+      capacidadeCargaCaminhaoNumeroMudas <
     0.9999999999999
       ? 1
       : Math.ceil(
-          (hectareValue * superficialSeedlingsPerHa) /
-            capacityLoadTruckNumberOfSeedlings
+          (hectareValue * mudasSuperficialporHa) /
+            capacidadeCargaCaminhaoNumeroMudas
         )
-  const totalSurfaceFreightCostChances =
-    distanceanningCenter * transportCostChangesPerKm
-  const quantityOfLitersConsumedDieselSurfaceRecovery =
-    distanceanningCenter / kmRotatedPerLiter
-  const fuelCostFreightSurfaceRecovery =
-    priceLiterDieselUSD * quantityOfLitersConsumedDieselSurfaceRecovery
-  const costFreightWithDriverSurfaceRecovery =
-    averageDriverSalaryFreightPerKmUSD * distanceanningCenter
-  const toSurfaceFreightCostOneWay =
-    costFreightWithDriverSurfaceRecovery +
-    fuelCostFreightSurfaceRecovery +
-    totalSurfaceFreightCostChances
-  const toSurfaceFreightCostRoundTrip = toSurfaceFreightCostOneWay * 2
-  const toCostFreightFinalSurfaceRecovery =
-    toSurfaceFreightCostRoundTrip * numberOfPathsSuperficialSeddlindRecovery
 
-  const surfaceSoilRecoveryWithoutFreight =
-    soilSurfaceRecPerHaValue * hectareValue
-  const toSurfaceRecoveryCostWithFreight =
-    toCostFreightFinalSurfaceRecovery + surfaceSoilRecoveryWithoutFreight
-  return toSurfaceRecoveryCostWithFreight
+  const custoFreteMudaSuperficialTotal =
+    distanciaDesmatCentro * custoTransporteMudaporKmBRL
+
+  const QtdeLitrosDieselConsumidoRecSuperficial =
+    distanciaDesmatCentro / kmRodadoporLitro
+
+  const custoCombustivelFreteRecSuperficial =
+    precoLitroDiesel * QtdeLitrosDieselConsumidoRecSuperficial
+
+  const CustoFretecomMotoristaRecSuperficial =
+    salarioMedioMotoristaFreteporKmBRL * distanciaDesmatCentro
+
+  const custoTotalFreteSuperficialIda =
+    CustoFretecomMotoristaRecSuperficial +
+    custoCombustivelFreteRecSuperficial +
+    custoFreteMudaSuperficialTotal
+
+  const CustoTotalFreteSuperficialdaeVolta = custoTotalFreteSuperficialIda * 2
+
+  const custoTotalFreteRecSuperficialFinal =
+    CustoTotalFreteSuperficialdaeVolta * numeroCaminhoesRecupSuperficialMudas
+
+  const CustoTotalRecSuperficialComFrete =
+    custoTotalFreteRecSuperficialFinal + custoRecSuperficialSoloSemFrete
+
+  return CustoTotalRecSuperficialComFrete
 }
 
 export default recoveryOfTopsoil
